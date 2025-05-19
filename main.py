@@ -39,3 +39,11 @@ Here are some of my credit card numbers:
 creditcard_pattern = r'[0-9]{4}[\s\-][0-9]{4}[\s\-][0-9]{4}[\s\-][0-9]{4}'
 creditcard_matches = re.findall(creditcard_pattern, credit_card)
 print(f"Credit card numbers: {creditcard_matches}")
+
+#Regular expression capturing valid time formats
+time = '''
+I usually go to school at 9:30 AM and have lunch break at 12:45 PM.
+I leave school at 13:75 or 19:45 and sleep at 23:59 or 24:01'''
+time_pattern = r'\b(?:[0-1]?\d|2[0-3]):[0-5]\d(?:\s?(?:AM|PM))?\b'
+time_matches = re.findall(time_pattern, time)
+print(f"Time: {time_matches}")
