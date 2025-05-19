@@ -18,3 +18,14 @@ You can also check:
 urls_pattern = r'https?:\/\/[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\/\S*)?'
 url_matches = re.findall(urls_pattern, urls)
 print(f"URLs: {url_matches}")
+
+#Regular expression capturing valid phone numbers
+phone_number = '''
+For support, call us me:
+- (123) 456-7890
+- 123-456-7890
+- 123.456.7890
+- 1234567890'''
+phone_pattern = r'(?:\(?\d{3}\)?)[\s\-\.]\d{3}[\s\-\.]\d{4}'
+phone_matches = re.findall(phone_pattern, phone_number)
+print(f"Phone numbers: {phone_matches}")
