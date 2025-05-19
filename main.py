@@ -29,3 +29,13 @@ For support, call us me:
 phone_pattern = r'(?:\(?\d{3}\)?)[\s\-\.]\d{3}[\s\-\.]\d{4}'
 phone_matches = re.findall(phone_pattern, phone_number)
 print(f"Phone numbers: {phone_matches}")
+
+#Regular expression capturing valid credit card numbers
+credit_card = '''
+Here are some of my credit card numbers:
+1234 5678 9012 3456
+1234-5678-9012-3456
+1234-5678-9012-345'''
+creditcard_pattern = r'[0-9]{4}[\s\-][0-9]{4}[\s\-][0-9]{4}[\s\-][0-9]{4}'
+creditcard_matches = re.findall(creditcard_pattern, credit_card)
+print(f"Credit card numbers: {creditcard_matches}")
